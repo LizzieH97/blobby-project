@@ -13,15 +13,12 @@ import BlobbyMerch from "../components/blobby-merch";
 import SignupForm from "../components/signup-form";
 import NavBar from "../components/nav-bar";
 import BlobbyVideos from "../components/blobby-videos";
+import Header from "../components/header";
 
 function App() {
   return (
     <div className="main-grid-container">
-      <div className="grid-title">
-        <h1>Welcome to Blobby Town</h1>
-        <img src="images/download.jpeg" className="blobby-pic" />
-      </div>
-      <h2 className="grid-subtitle">May God have mercy on your soul</h2>
+      <Header />
       <NavBar />
       <div className="changing-grid-item">
         <Routes>
