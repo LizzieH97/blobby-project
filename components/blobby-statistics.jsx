@@ -14,7 +14,7 @@ function BlobbyStatistics() {
 
   return (
     <>
-      <h2 id="stats">Blobby Statistics</h2>
+      <h2 className="stats">Blobby Statistics</h2>
       <div className="container">
         {blobbyStats.length > 0 ? (
           blobbyStats.map((stat, index) => (

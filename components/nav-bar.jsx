@@ -32,6 +32,11 @@ function NavBar() {
             Blobby Videos
           </a>
         </li>
+        <li className="list-item">
+          <a href="/log-book" className="Btn">
+            Log Book
+          </a>
+        </li>
       </ul>
     </nav>
   );
