@@ -1,3 +1,5 @@
+import SignupForm from "./signup-form";
+
 function BlobbyVideos() {
   return (
     <>
@@ -47,6 +49,7 @@ function BlobbyVideos() {
           </span>
         </div>
       </div>
+      <SignupForm />
     </>
   );
 }

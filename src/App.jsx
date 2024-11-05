@@ -27,7 +27,6 @@ function App() {
           <Route path="/unticked-return" element={<UntickedReturn />} />
         </Routes>
       </div>
-      <SignupForm />
     </div>
   );
 }

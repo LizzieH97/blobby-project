@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "./api-calls"; // Adjust the path as needed
+import SignupForm from "./signup-form";
 
 const LogBook = () => {
   const [logBook, setLogBook] = useState([]);
@@ -19,17 +20,36 @@ const LogBook = () => {
 
   return (
     <div>
-      {logBook.map((entry, index) => {
-        let createdAt = entry.created_at;
-        let slicedCreatedAt = createdAt.slice(0, 10);
-        return (
-          <ul key={index} className="log-book">
-            <li className="grid-log-book-name">Name: {entry.Name}</li>
-            <li className="grid-log-book-date">Created: {slicedCreatedAt}</li>
-            <li className="log-book-message">{entry.Message}</li>
-          </ul>
-        );
-      })}
+      <div className="log-grid">
+        {logBook.map((entry, index) => {
+          let createdAt = entry.created_at;
+          let slicedCreatedAt = createdAt.slice(0, 10);
+
+          return (
+            <div className="window" key={index}>
+              <div className="window__head">
+                <div className="window__head-meta">
+                  <p className="window__head-title">
+                    {entry.name} | {slicedCreatedAt}
+                  </p>
+                </div>
+                <div className="window__head-controllers">
+                  <button className="window__head-button window__head-button--hide">
+                    -
+                  </button>
+                  <button className="window__head-button window__head-button--exit">
+                    x
+                  </button>
+                </div>
+              </div>
+              <div className="window__body">
+                <div className="window__frame">{entry.message}</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <SignupForm />
     </div>
   );
 };

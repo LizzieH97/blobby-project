@@ -1,11 +1,15 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { addComment } from "./api-calls"; // Make sure you import addComment correctly
 
 function SignupForm() {
   const [name, setName] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false); // Track submitting state
+  const [error, setError] = useState(null); // Track any errors
   const navigate = useNavigate();
+
   const onNameChange = (event) => {
     setName(event.target.value);
   };
@@ -18,17 +22,38 @@ function SignupForm() {
     setIsChecked(event.target.checked);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission
-    console.log(name);
-    console.log(message);
-    console.log(isChecked ? "Checkbox is checked" : "Checkbox is not checked");
 
-    // Navigate to the appropriate route based on the checkbox state
-    if (isChecked) {
-      navigate("/ticked-return"); // Navigate to TickedReturn route
-    } else {
-      navigate("/unticked-return"); // Navigate to UntickedReturn route
+    // Basic form validation
+    if (!name || !message) {
+      setError("Both name and message are required.");
+      return;
+    }
+
+    setIsSubmitting(true); // Set submitting state to true while the comment is being submitted
+    setError(null); // Reset error state
+
+    try {
+      // Wait for the comment to be added to Supabase
+      await addComment(name, message);
+
+      // Redirect to the appropriate page after submission
+      if (isChecked) {
+        navigate("/ticked-return"); // Navigate to TickedReturn route if checkbox is checked
+      } else {
+        navigate("/unticked-return"); // Navigate to UntickedReturn route if checkbox is not checked
+      }
+
+      // Optionally clear form fields after submission
+      setName("");
+      setMessage("");
+    } catch (err) {
+      // Handle any errors that might occur during the comment submission
+      setError("Failed to post your comment. Please try again.");
+      console.error("Error posting comment:", err);
+    } finally {
+      setIsSubmitting(false); // Reset submitting state after completion
     }
   };
 
@@ -43,6 +68,7 @@ function SignupForm() {
           id="firstName"
           value={name}
           onChange={onNameChange}
+          disabled={isSubmitting} // Disable input while submitting
         />
         <label htmlFor="message">Message: </label>
         <input
@@ -51,6 +77,7 @@ function SignupForm() {
           id="message"
           value={message}
           onChange={onMessageChange}
+          disabled={isSubmitting} // Disable input while submitting
         />
         <label htmlFor="permissionCheckbox">
           By checking this box I hereby pledge my firstborn child to Mr. Blobby
@@ -61,8 +88,13 @@ function SignupForm() {
           id="permissionCheckbox"
           checked={isChecked}
           onChange={onCheckChange}
+          disabled={isSubmitting} // Disable checkbox while submitting
         />
-        <button type="submit">Submit</button>
+        {error && <p style={{ color: "red" }}>{error}</p>}{" "}
+        {/* Show error message */}
+        <button type="submit" disabled={isSubmitting} className="Btn">
+          {isSubmitting ? "Submitting..." : "Submit"}
+        </button>
       </form>
     </>
   );

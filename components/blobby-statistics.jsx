@@ -1,3 +1,5 @@
+import SignupForm from "./signup-form";
+
 function BlobbyStatistics() {
   const blobbyStats = [
     "Birth Date: 3rd September 1705",
@@ -18,21 +20,21 @@ function BlobbyStatistics() {
       <div className="container">
         {blobbyStats.length > 0 ? (
           blobbyStats.map((stat, index) => (
-            <div className="flip-card" key={index}>
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <div className="card">
+            <div className="stats-flip-card" key={index}>
+              <div className="stats-flip-card-inner">
+                <div className="stats-flip-card-front">
+                  <div className="stats-card">
                     <img
                       src="images/download.jpeg"
-                      className="card-img-top"
+                      className="stats-card-img-top"
                       alt="Front Image"
                     />
                   </div>
                 </div>
-                <div className="flip-card-back">
-                  <div className="card">
-                    <div className="card-body">
-                      <p className="card-text">{stat}</p>
+                <div className="stats-flip-card-back">
+                  <div className="stats-card">
+                    <div className="stats-card-body">
+                      <p className="stats-card-text">{stat}</p>
                     </div>
                   </div>
                 </div>
@@ -43,20 +45,7 @@ function BlobbyStatistics() {
           <p>No statistics available.</p>
         )}
       </div>
-
-      <ul className="stats-list">
-        <li>
-          For more statistics, visit this link:
-          <a
-            href="https://en.wikipedia.org/wiki/Mr_Blobby"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="wiki-leak"
-          >
-            Mr Blobby Wikipedia
-          </a>
-        </li>
-      </ul>
+      <SignupForm />
     </>
   );
 }

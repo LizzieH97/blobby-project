@@ -1,3 +1,5 @@
+import SignupForm from "./signup-form";
+
 function BlobbyMerch() {
   const merchItems = [
     {
@@ -134,6 +136,7 @@ function BlobbyMerch() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      <SignupForm />
     </>
   );
 }

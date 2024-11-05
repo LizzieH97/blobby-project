@@ -1,3 +1,5 @@
+import SignupForm from "./signup-form";
+
 function FirstParagraph() {
   return (
     <>
@@ -17,6 +19,7 @@ function FirstParagraph() {
           Christmas song simply called "Mr Blobby".
         </p>
       </div>
+      <SignupForm />
     </>
   );
 }

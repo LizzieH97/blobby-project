@@ -19,17 +19,17 @@ function NavBar() {
         </li>
         <li className="list-item">
           <a href="/blobby-statistics" className="Btn">
-            Blobby Statistics
+            Statistics
           </a>
         </li>
         <li className="list-item">
           <a href="/blobby-merch" className="Btn">
-            Blobby Merchandise
+            Merchandise
           </a>
         </li>
         <li className="list-item">
           <a href="/blobby-videos" className="Btn">
-            Blobby Videos
+            Videos
           </a>
         </li>
         <li className="list-item">
