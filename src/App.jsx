@@ -10,6 +10,7 @@ import Header from "../components/header";
 import LogBook from "../components/log-book";
 import TickedReturn from "../components/ticked-log-book";
 import UntickedReturn from "../components/unticked-log-book";
+import { supabaseAnonKey, supabaseUrl } from "../components/api-calls";
 
 function App() {
   return (
