@@ -2,8 +2,8 @@ import SignupForm from "./signup-form";
 
 function BlobbyVideos() {
   return (
-    <>
-      <h2 id="vids">Blobby Videos</h2>
+    <div className="vids-container">
+      <h2 className="vids-intro">Blobby Videos</h2>
       <p className="vids-intro">
         Here are some of Mr Blobby's most iconic moments, click on the videos
         below to watch:
@@ -50,7 +50,7 @@ function BlobbyVideos() {
         </div>
       </div>
       <SignupForm />
-    </>
+    </div>
   );
 }
 export default BlobbyVideos;
