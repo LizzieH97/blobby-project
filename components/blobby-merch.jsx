@@ -5,7 +5,7 @@ function BlobbyMerch() {
     {
       title: "Blobby Crocheted Plush Toy",
       link: "https://www.etsy.com/uk/shop/LHCrochetCrochet",
-      image: "./images/Screenshot from 2024-10-24 21-31-45.png",
+      image: "src/assets/Screenshot from 2024-10-24 21-31-45.png",
       alt: "crocheted Mr Blobby, pink with yellow spots",
       description:
         "Wow! I wonder who made this! (Hint: it was me it took ages)",
@@ -15,7 +15,7 @@ function BlobbyMerch() {
     {
       title: " Mr Blobby T-Shirt",
       link: "https://memejoy.co/products/mr-blobby-homage-t-shirt?variant=34496261128324",
-      image: "./images/Screenshot from 2024-10-24 21-33-13.png",
+      image: "src/assets/Screenshot from 2024-10-24 21-33-13.png",
       alt: "crocheted Mr Blobby, pink with yellow spots",
       description: "Wow!! Three different colours!! Grey, White and Black",
       price: "£15.99 (normally £20.99 - be quick!)",
@@ -24,7 +24,7 @@ function BlobbyMerch() {
     {
       title: "Mr Blobby Birthday Card",
       link: "https://www.etsy.com/uk/listing/1201842577/mr-blobby-birthday-card-funny-humour?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=mr+blobby&ref=sr_gallery-1-3&sts=1&content_source=9822f5076d056fbe1f2bb0937134976beea3cb29%253A1201842577&organic_search_click=1",
-      image: "./images/Screenshot from 2024-09-09 17-49-49.png",
+      image: "src/assets/Screenshot from 2024-09-09 17-49-49.png",
       alt: "Mr Blobby birthday card, reading 'It's your blobby blobby blobby!'",
       description:
         "What could be a better celebration on your birthday than a healthy dose of Mr Blobby!!",
@@ -34,7 +34,7 @@ function BlobbyMerch() {
     {
       title: "Mr Blobby Scrunchie",
       link: "https://www.etsy.com/uk/listing/1295102066/mr-blobby-inspired-scrunchie-90s-kid?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=mr+blobby&ref=sc_gallery-1-6&plkey=e9ea015804a0dbfe45a205a19345a5c182488c8e%3A1295102066",
-      image: "./images/Screenshot from 2024-09-09 17-56-33.png",
+      image: "src/assets/Screenshot from 2024-09-09 17-56-33.png",
       alt: "Light pink scrunchie with images of Mr Blobby across",
       description:
         "If you'd like to be more subtle with your Blobby worship, this could be for you!!",
@@ -44,7 +44,7 @@ function BlobbyMerch() {
     {
       title: "Mr Blobby Necklace and Earrings",
       link: "https://www.etsy.com/uk/listing/1111653667/mr-blobby-jewellery?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=mr+blobby&ref=sr_gallery-1-9&content_source=3cfd812baa26aeea492d4032ffc4452f324aed29%253A1111653667&organic_search_click=1",
-      image: "./images/Screenshot from 2024-09-09 18-03-46.png",
+      image: ".src/assets/Screenshot from 2024-09-09 18-03-46.png",
       alt: "Dangle earrings and necklace with clay models of Mr Blobby, one on each earring and one on the necklace",
       description: "Wow - how incredibly stylish!! I wish I had these.",
       price: "Earrings: £10.00, Necklace: £9.00",
@@ -53,7 +53,7 @@ function BlobbyMerch() {
     {
       title: "Buff Mr Blobby Sticker",
       link: "https://www.etsy.com/uk/listing/1336727318/mr-blobby-buff-sticker-mr-blobby?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=mr+blobby&ref=sr_gallery-1-26&content_source=74f42d88d3421fb09762d72e07fd60e8f4deb788%253A1336727318&organic_search_click=1",
-      image: "./images/Screenshot from 2024-09-09 18-18-56.png",
+      image: "src/assets/Screenshot from 2024-09-09 18-18-56.png",
       alt: "Sticker of a cartoon Mr Blobby with muscles, posing lying down with his hand on his head",
       description:
         " I don't have anything to say about this one... Jesus Christ.",

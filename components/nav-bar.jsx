@@ -7,7 +7,7 @@ function NavBar() {
         <li className="list-item">
           <a href="/">
             <img
-              src="/images/Mr-Blobby-costume-banner.jpg"
+              src="src/assets/Mr-Blobby-costume-banner.jpg"
               className="blobby-pic-nav"
             />
           </a>
