@@ -63,7 +63,7 @@ function BlobbyMerch() {
   ];
   return (
     <>
-      <h2 className="merch">Blobby Merchandise</h2>
+      <h2 className="merch-intro">Blobby Merchandise</h2>
       <p className="merch-intro">
         Check out some of the items on sale related to Mr Blobby! Just click on
         the images below to visit the associated shops:
