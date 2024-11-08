@@ -32,7 +32,6 @@ h1 {
   text-align: center;
   margin: 0;
   width: 900px;
-  font-size: 75px;
 }
 
 .header-grid {
@@ -41,8 +40,8 @@ h1 {
   grid-row-start: 1;
   grid-row-end: 2;
   display: grid;
-  grid-template-columns: 15% 30% 25% 30%;
-  grid-template-rows: 70% 30%;
+  grid-template-columns: 100px 300px 250px 300px;
+  grid-template-rows: 90px 60px;
   justify-content: center;
   align-items: center;
   border-width: 10px;
@@ -63,7 +62,7 @@ h1 {
   grid-row: 1;
   padding: 0;
   margin: 0;
-
+  font-size: 75px;
   max-width: 1500px;
 }
 .header-subtitle {
@@ -71,7 +70,7 @@ h1 {
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row: 2;
-  width: 80%;
+  width: 700px;
   justify-content: center;
   align-items: flex-start;
   font-size: 30px;
@@ -309,7 +308,6 @@ h1 {
   transform: rotateY(180deg);
 }
 
-/* Image Styling */
 .stats-card-img-top {
   max-height: 200px;
   max-width: 180px;
@@ -359,39 +357,7 @@ h1 {
   margin-right: auto;
   padding: 1%;
 }
-.grid-pic-2 {
-  border-radius: 100%;
-  max-width: 50%;
-  width: fit-content;
-  height: fit-content;
-  max-height: 60%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1%;
-}
-.grid-pic-3 {
-  border-radius: 100%;
-  max-width: 40%;
-  width: fit-content;
-  height: fit-content;
-  max-height: 30%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1%;
-}
-.grid-pic-4 {
-  border-radius: 100%;
-  max-width: 40%;
-  width: fit-content;
-  height: fit-content;
-  max-height: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1%;
-}
+
 .merch-intro {
   padding: 1%;
   font-size: larger;
@@ -611,55 +577,81 @@ input {
   border-color: rgb(253, 141, 244);
   border-style: solid;
 }
-/* Media Query for Mobile (max-width: 768px) */
+
 @media (max-width: 768px) {
   .main-grid-container {
     display: grid;
-    grid-template-columns: 20% repeat(2, 1fr);
-    grid-template-rows: 5% 35% 25% 25% 15%;
-    column-gap: 0px;
-    row-gap: 0px;
-    margin: 0;
-    padding: 0;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 5% 45% 32% 8%;
   }
-  h1 {
+
+  .header-grid {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 70% 30%; /* Default to 1 column on mobile */
+    grid-template-rows: 70% 30%;
+    border-width: 10px;
+    border-style: dotted;
+    border-color: rgba(240, 234, 148, 0.945);
+    border-radius: 15px;
+    margin: 1%;
+    padding: 1%;
+    padding-top: 1%;
+    padding-left: 5%;
+  }
+
+  .header-title {
+    align-items: center;
+    justify-content: flex-start;
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 0;
+    font-size: large;
+    max-width: 550px;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
+  .header-subtitle {
+    display: flex;
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    padding-left: 0;
+    margin-top: 10%;
+    padding-bottom: 20px;
     text-align: center;
-    margin: 0;
-    width: 400px;
-    font-size: medium;
+  }
+
+  .blobby-header {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    align-self: flex-end;
+    margin-left: 20%;
   }
   .nav-bar {
-    justify-content: center;
-    position: fixed;
+    position: sticky;
     top: 0;
-    float: right;
-    margin-top: 0px;
-    padding-top: 0px;
-    grid-column: 1 / span 4;
-    grid-row: 2;
+    height: 80px;
   }
   .nav-bar ul {
-    width: 100px;
-    background-color: #fdfdfd;
-    background-image: linear-gradient(
-      90deg,
-      #fdfdfd 0%,
-      #ffe66a 10%,
-      #ffd300 30%,
-      #ffd300 50%,
-      #ffe66a 90%,
-      #ffffff 100%
-    );
-    padding: 8px;
-    font-size: small;
-    display: block;
-    border-width: 7px;
-    border-color: rgb(252, 248, 248);
-    border-style: dotted;
-    border-color: rgb(229, 102, 219);
-    border-radius: 20px;
-    font-size: small;
-    padding-bottom: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .blobby-pic-nav {
+    width: 0px;
+    height: 0px;
   }
   .list-item {
     list-style-type: none;
@@ -667,19 +659,15 @@ input {
     flex-wrap: wrap;
     flex-direction: column;
     margin: 0;
-    margin-bottom: 10%;
-    align-items: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    align-self: center;
+    font-size: x-small;
   }
   .Btn {
     position: relative;
-    width: 80px;
+    width: 70px;
     height: 40px;
-    border-radius: 30px;
-    border: none;
-    background-color: rgb(229, 102, 219);
-    color: white;
-    box-shadow: 0px 10px 10px rgb(255, 198, 146) inset,
-      0px 5px 10px rgba(5, 5, 5, 0.212), 0px -10px 10px rgb(145, 63, 138) inset;
     cursor: pointer;
     display: flex;
     align-content: space-around;
@@ -691,8 +679,6 @@ input {
     width: 80%;
     height: 2px;
     position: absolute;
-    background-color: rgba(250, 250, 250, 0.678);
-    content: "";
     filter: blur(1px);
     top: 7px;
     border-radius: 50%;
@@ -702,8 +688,6 @@ input {
     width: 80%;
     height: 2px;
     position: absolute;
-    background-color: rgba(250, 250, 250, 0.137);
-    content: "";
     filter: blur(1px);
     bottom: 7px;
     border-radius: 50%;
@@ -712,37 +696,139 @@ input {
   .Btn:hover {
     animation: jello-horizontal 0.9s both;
   }
+  .changing-grid-item {
+    grid-column: 1 / span 4;
+    grid-row: 3 / span 4;
+    padding: 1%;
+    margin-top: 8%;
+  }
+  .first-paragraph {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 70%;
+    font-size: small;
+    max-height: 100%;
+    padding: 0;
+    display: block;
+    max-width: 700px;
+  }
   .stats {
-    margin-left: 10%; /* Reduce margin */
-    margin-right: 10%;
-    font-size: large; /* Slightly smaller font on mobile */
-    padding: 5% 10%; /* Adjust padding for mobile */
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: large;
+    padding: 0;
   }
-
   .container {
+    display: flex;
     flex-direction: row;
-    height: 200px;
-    width: 180px; /* Stack cards in a single column */
-    /* Center items */
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0;
+    flex-wrap: wrap;
+    align-content: center;
   }
-
+  .stats-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
   .stats-flip-card {
-    flex: 1 0 100%; /* Make each card take full width on mobile */
-    max-width: 100%; /* Ensure full width */
-    height: 200px; /* Auto height to fit content */
+    width: 400px;
+    height: 100px;
+    max-width: 100%;
+    max-height: 30%;
   }
 
   .stats-card-img-top {
-    max-width: 150px; /* Adjust image size */
-    max-height: 150px; /* Keep image size reasonable */
+    max-width: 90%;
+    max-height: 90%;
+    padding: 1%;
+    margin: 0%;
+  }
+  .stats-card-body {
+    align-self: center;
+    padding: 1%;
+    max-height: 100%;
   }
 
   .stats-card-text {
-    font-size: large; /* Adjust text size for mobile */
+    font-size: 70%;
+    max-height: 70%;
+    padding: 0%;
+    margin: 0%;
   }
-  .nav-bar {
-    float: inline-start;
-    width: 50%;
-    height: 50%;
+  .merch-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 0%;
+    row-gap: 0%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .merch {
+    font-size: medium;
+    padding-left: 30%;
+    margin: 0%;
+  }
+  .merch-intro {
+    font-size: small;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0%;
+  }
+  .merch-grid-item {
+    text-align: center;
+    align-items: center;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    border-width: 7px;
+  }
+  .grid-pic {
+    border-radius: 100%;
+    max-width: 30%;
+    width: auto;
+    height: auto;
+    max-height: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0%;
+  }
+  .carousel-indicators {
+    margin: 0%;
+  }
+  .merch-description {
+    max-height: 100%;
+    margin: 0%;
+    padding-bottom: 1%;
+  }
+  .a {
+    max-height: 90%;
+  }
+  #signup-form {
+    margin-left: 0%;
+    width: 100%;
+    font-size: x-small;
+    text-align: center;
+    margin-top: 1%;
+    grid-column: 1 / span 4;
+    grid-row: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .signup-label {
+    padding: 0%;
+    margin: 0%;
+    font-size: x-small;
+  }
+  input {
+    width: 150px;
   }
 }

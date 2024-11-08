@@ -8,7 +8,7 @@ function NavBar() {
           <a href="/">
             <img
               src="/images/Mr-Blobby-costume-banner.jpg"
-              className="blobby-pic"
+              className="blobby-pic-nav"
             />
           </a>
         </li>

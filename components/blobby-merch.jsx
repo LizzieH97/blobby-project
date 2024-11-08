@@ -63,7 +63,7 @@ function BlobbyMerch() {
   ];
   return (
     <>
-      <h2 id="merch">Blobby Merchandise</h2>
+      <h2 className="merch">Blobby Merchandise</h2>
       <p className="merch-intro">
         Check out some of the items on sale related to Mr Blobby! Just click on
         the images below to visit the associated shops:
@@ -93,9 +93,8 @@ function BlobbyMerch() {
               key={index}
             >
               <span className="merch-grid-item">
-                {item.title}
+                <p className="merch-description">{item.title}</p>
                 <a href={item.link} target="_blank">
-                  <br />
                   <img
                     src={item.image}
                     alt={item.alt}
@@ -103,10 +102,9 @@ function BlobbyMerch() {
                     loading="lazy"
                   />
                 </a>
-                <br />
-                {item.description}
-                <br />
-                {item.price} <br /> {item.stock}
+                <p className="merch-description">{item.description}</p>
+                <p className="merch-description">{item.price}</p>
+                <p className="merch-description">{item.stock}</p>
               </span>
             </div>
           ))}
